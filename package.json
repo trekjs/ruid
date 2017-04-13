@@ -1,0 +1,73 @@
+{
+  "name": "ruid",
+  "version": "1.0.0",
+  "description": "Random Unique ID generator",
+  "repository": "trekjs/ruid",
+  "license": "MIT",
+  "author": {
+    "name": "Fangdun Cai",
+    "email": "cfddream@gmail.com",
+    "url": "fundon.me"
+  },
+  "keywords": [
+    "uid",
+    "ruid",
+    "random"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "devDependencies": {
+    "ava": "0.19",
+    "nyc": "10",
+    "xo": "0.18"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "es6"
+    ],
+    "semicolon": false,
+    "space": true,
+    "ignores": [],
+    "rules": {
+      "curly": 0,
+      "ava/prefer-async-await": 0,
+      "import/no-dynamic-require": 0,
+      "import/no-named-as-default": 0,
+      "max-lines": 0,
+      "no-warning-comments": [
+        "error",
+        {
+          "terms": [
+            "todo",
+            "fixme"
+          ],
+          "location": "anywhere"
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always",
+        {
+          "arraysInObjects": true,
+          "objectsInObjects": true
+        }
+      ],
+      "space-before-function-paren": [
+        2,
+        "always"
+      ],
+      "yoda": 0
+    }
+  }
+}
