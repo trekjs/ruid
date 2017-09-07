@@ -16,7 +16,7 @@ module.exports = ruid
 
 // https://www.npmjs.com/package/uid-safe
 // https://github.com/zeit/uid-promise
-function ruid (len = 24, time = true, encoding = 'base64') {
+function ruid(len = 24, time = true, encoding = 'base64') {
   return new Promise((resolve, reject) => {
     randomBytes(len, (err, buf) => {
       if (err) return reject(err)
@@ -26,7 +26,7 @@ function ruid (len = 24, time = true, encoding = 'base64') {
 }
 
 // https://www.npmjs.com/package/uniqid
-function now () {
+function now() {
   const time = Date.now()
   const last = now.last || time
   now.last = time > last ? time : last + 1
@@ -35,7 +35,7 @@ function now () {
 
 // https://en.wikipedia.org/wiki/Base64#RFC_4648
 // https://github.com/joaquimserafim/base64-url/blob/master/index.js#L11
-function escape (str) {
+function escape(str) {
   return str
     .replace(PLUS, '-')
     .replace(SLASH, '_')
